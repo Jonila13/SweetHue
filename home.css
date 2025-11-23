@@ -6,10 +6,7 @@
 }
 
 body {
-    margin: 0;
-    font-family: "Poppins",sans-serif;
-    background: #ffe4f2;
-    color: #4a004e;
+    background: #fff7fb;
 }
 
 .navbar {
@@ -48,75 +45,71 @@ body {
     border-bottom: 2px solid #fff;
 }
 .hero {
-   text-align: center;
-   padding: 120px 20px;
-   background: #ffb3d9;
-   border-radius: 0 0 40px 40px;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 60px;
 
-.hero h1 {
-    font-size: 3rem;
+}
+.hero-text h1 {
+    font-family: 'Playfair Display' serif;
+    font-size: 60px;
+    color: #b03060;
     margin-bottom: 10px;
 
 }
- .hero p {
-    font-size: 1.2rem;
 
- }
- .btn {
-    display: inline-block;
+.hero-text p {
+    color: #9b4a6f;
+    font-size: 20px;
+
+}
+.btn {
     margin-top: 20px;
-    padding: 12px 28px;
-    background: white;
-    border-radius: 25px;
-    color: #ff3d8e;
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 12px;
+    background: #f8b3c7;
+    color: #b03060;
     text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
- }
+    font-weight: 600;
 
- .btn:hover {
-    background: #ff3d8e;
-    color: white;
+}
 
- }
+.hero-img.img{
+    width: 340px;
+    border-radius: 20px;
 
- .desserts {
-    text-align: center;
-    padding: 60px 20px;
+}
 
- }
- .desserts h2 {
-    font-size: 2.2rem;
-    margin-bottom: 40px;
-
- }
- .desserts-container {
+.cards {
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
- }
+    justify-content: space-around;
+    padding: 60px;
+
+}
  .card {
     background: white;
-    width: 270px;
-    padding: 20px;
-    border-radius: 20px;
+    width: 280px;
+    border-radius: 18px;
+    padding: 18px;
     text-align: center;
-    box-shadow: 0 4px 10px rbg(0 0 0/10%);
 
  }
  .card img {
     width: 100%;
-    border-radius: 15px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+ }
+
+ .card h2 {
+    font-family: 'Playfair Display' serif;
+    color: #b03060;
 
  }
- .card h3 {
-    margin-top: 15px;
- }
  .card p {
-    font-size: 0.9rem;
-    margin-top: 8px;
+   font-size: 14px;
+   color: #7d5a6f;
  }
 
  
