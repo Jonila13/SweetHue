@@ -118,5 +118,68 @@ body {
     font-size: 0.9rem;
     margin-top: 8px;
  }
+/* ABOUT PAGE */
 
- 
+.about {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 40px;
+    background: #fff7fb; /* pink pastel */
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.about h1 {
+    text-align: center;
+    font-size: 38px;
+    color: #d45480;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.about h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #c64275;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.about p {
+    color: #444;
+    line-height: 1.7;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.about ul {
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+.about ul li {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #555;
+    position: relative;
+}
+
+.about ul li::before {
+    content: "•";
+    color: #d45480;
+    font-weight: bold;
+    position: absolute;
+    left: -15px;
+    top: 0;
+}
+
+/* Smooth fade-in animation */
+.about {
+    animation: fade 0.8s ease-in-out;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
