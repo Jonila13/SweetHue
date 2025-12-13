@@ -183,3 +183,53 @@ body {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.contact-left,
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 45%;
+}
+
+.contact-box {
+    padding: 15px 20px;
+    background-color: #fff4f7; 
+    border: 1px solid #ffb6c9;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.contact-box:hover {
+    background-color: #ffe1e9;
+    transform: translateY(-3px);
+}
+
+/* ABOUT US seksioni */
+.about {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.about h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #d94872;
+}
+
+.about h2 {
+    margin-top: 25px;
+    color: #c83665;
+}
+
+
