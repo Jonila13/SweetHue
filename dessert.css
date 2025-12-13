@@ -112,3 +112,57 @@ button{
 button:hover {
     background: #cc0077;
 }
+/* custom cakes*/
+.custom-cakes {
+    padding: 50px 20px;
+    background-color: #ffb3d1; 
+    text-align: center;
+}
+
+.custom-cakes h2 {
+    font-size: 28px;
+    color:#4a004e; 
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.custom-cakes p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.custom-cake-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.cake-card {
+    background-color: #fff; 
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 200px; 
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    transition: transform 0.2s;
+}
+
+.cake-card img {
+    width: 100%;
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+.cake-card h3 {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.cake-card:hover {
+    transform: translateY(-5px);
+    border-color: #d2691e;
