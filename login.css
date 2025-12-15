@@ -138,11 +138,11 @@ form button {
     content: "";
     position: absolute;
     border-radius: 50%;
-    background: rgba(255, 95, 162, 0.15); /* ngjyra pastel */
-    z-index: 0; /* mbas card-it */
+    background: rgba(255, 95, 162, 0.15); 
+    z-index: 0; 
 }
 
-/* Bubble i madh lart majtas */
+
 body::before {
     width: 250px;
     height: 250px;
@@ -150,7 +150,7 @@ body::before {
     left: -80px;
 }
 
-/* Bubble i madh poshtë djathtas */
+
 body::after {
     width: 300px;
     height: 300px;
