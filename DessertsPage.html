@@ -6,8 +6,10 @@
     <title>DessertsPage</title>
     <link rel="stylesheet" href="dessert.css">
     
+    
 </head>
 <body>
+   
      <nav class="navbar">
         <div class="logo">SweetHue</div>
 
@@ -17,6 +19,11 @@
             <li><a href="aboutUS.html">About Us</a></li>
         </ul>
     </nav>
+    <section class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p class="total">Total: €<span id="cart-total">0.00</span></p>
+</section>
     <header>
         <h1>Desserts</h1>
         <p>Order your dessert for any occasion</p>
@@ -28,153 +35,154 @@
             <img src="macarons1.jpg">
             <h3>Macarons</h3>
             <p class="price">€2.99</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Macarons', 2.99)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="cupcake.jpg">
             <h3>Red Velvet Cupcake</h3>
             <p class="price">€2.50</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Red Velvet Cupcake', 2.50)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="Strawberry.jpg">
             <h3>Strawberry Cake Slice</h3>
             <p class="price">€3.90</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Strawberry Cake Slice', 3.90)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="chocolate.jpg">
             <h3>Chocolate Cake</h3>
             <p class="price">€3.50</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Chocolate Cake', 3.50)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="cheescake.jpg">
             <h3>Cheescake</h3>
             <p class="price">€3.00</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Cheescake', 3.00)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="vanillaICE.jpg">
             <h3>Vanilla Ice Cream</h3>
             <p class="price">€1.50</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Vanilla Ice Cream', 1.50)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="brownie.jpg">
             <h3>Brownie</h3>
             <p class="price">€1.90</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Brownie', 1.90)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="pinkDonut.jpg">
             <h3>Pink Donut</h3>
             <p class="price">€1.20</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Pink Donut', 1.20)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="chocolateMufins.jpg">
             <h3>Chocolate Muffin</h3>
             <p class="price">€1.00</p>
-            <button>Add to Cart</button>
+           <button onclick="addToCart('Chocolate Muffin', 1.00)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="tiramisu.jpg">
             <h3>Tiramisu</h3>
             <p class="price">€3.50</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Tiramisu', 3.50)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="vanillaPudding.jpg">
             <h3>Vanilla Pudding</h3>
             <p class="price">€1.80</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Vanilla Pudding', 1.80)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="strawberryWafers.jpg">
             <h3>Strawberry Wafers</h3>
             <p class="price">€2.40</p>
-            <button>Add to Cart</button>
+           <button onclick="addToCart('Strawberry Wafers', 2.40)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="churros.jpg">
             <h3>Churros</h3>
             <p class="price">€3.20</p>
-            <button>Add to Cart</button>
+           <button onclick="addToCart('Churros', 3.20)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="pancakes.jpg">
             <h3>Pancakes</h3>
             <p class="price">€3.90</p>
-            <button>Add to Cart</button>
+           <button onclick="addToCart('Pancakes', 3.90)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="fruitTart.jpg">
             <h3>Fruit Tart</h3>
             <p class="price">€2.30</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Fruit Tart', 2.30)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="caramelCake.jpg">
             <h3>Caramel Cake</h3>
             <p class="price">€3.25</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Caramel Cake', 3.25)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="chipCookie.jpg">
             <h3>Chocolate Chip Cookie</h3>
             <p class="price">€1.20</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Chocolate Chip Cookie', 1.20)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="`oreoCake.jpg">
             <h3>Oreo Cake</h3>
             <p class="price">€4.20</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Oreo Cake', 4.20)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="cinnamonRoll.jpg">
             <h3>Cinnamonroll</h3>
             <p class="price">€2.80</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Cinnamonroll', 2.80)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="bannanaBread.jpg">
             <h3>Banana Bread</h3>
             <p class="price">€2.50</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Banana Bread', 2.50)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="crepes.jpg">
             <h3>Crepes</h3>
             <p class="price">€3.60</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Crepes', 3.60)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="berryCake.jpg">
-            <h23>Berry Cake</h23>
+            <h3>Berry Cake</h3>
             <p class="price">€4.10</p>
-            <button>Add to Cart</button>
+            <<button onclick="addToCart('Berry Cake', 4.10)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="mangoCake.jpg">
             <h3>Mango Cake</h3>
             <p class="price">€4.50</p>
-            <button>Add to Cart</button>
+        <button onclick="addToCart('Mango Cake', 4.50)">Add to Cart</button>
             
         </div>
         <div class="product">
             <img src="honeyCake.jpg">
             <h3>Honey Cake</h3>
             <p class="price">€4.40</p>
-            <button>Add to Cart</button>
+           <button onclick="addToCart('Honey Cake', 4.40)">Add to Cart</button>
         </div>
         <div class="product">
             <img src="ferrero.jpg">
             <h3>Ferrero Rocher Cake</h3>
             <p class="price">€4.00</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart('Ferrero Rocher Cake', 4.00)">Add to Cart</button>
         </div>
+
 
     </section>
   <section class="custom-cakes">
@@ -203,5 +211,42 @@
         </div>
     </div>
 </section>
+
+
 </body>
+<script>
+    let cart = [];
+    let total = 0;
+
+    function addToCart(name, price) {
+        cart.push({ name, price });
+        total += price;
+        updateCart();
+    }
+
+    function removeFromCart(index) {
+        total -= cart[index].price;
+        cart.splice(index, 1);
+        updateCart();
+    }
+
+    function updateCart() {
+        const cartItems = document.getElementById("cart-items");
+        const cartTotal = document.getElementById("cart-total");
+
+        cartItems.innerHTML = "";
+
+        cart.forEach((item, index) => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+                ${item.name} - €${item.price.toFixed(2)}
+                <button onclick="removeFromCart(${index})" class="remove-btn">❌</button>
+            `;
+            cartItems.appendChild(li);
+        });
+
+        cartTotal.textContent = total.toFixed(2);
+    }
+</script>
+
 </html>

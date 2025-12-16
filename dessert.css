@@ -166,3 +166,40 @@ button:hover {
 .cake-card:hover {
     transform: translateY(-5px);
     border-color: #d2691e;
+}
+.cart {
+    max-width: 300px;
+    background: #fff0f6;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: fixed;
+    right: 20px;
+    top: 100px;
+}
+
+.cart h2 {
+    margin-bottom: 10px;
+}
+
+.cart ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart li {
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.total {
+    font-weight: bold;
+    margin-top: 10px;
+}
+.remove-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 8px;
+}
