@@ -1,16 +1,45 @@
-* {
+
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
+
 body {
     margin: 0;
-    font-family: "Poppins",sans-serif;
-    background: #ffe4f2;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(120deg, #fff0f6, #ffd6e8);
     color: #4a004e;
+    position: relative;
+    overflow-x: hidden;
 }
+
+
+body::before,
+body::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 95, 162, 0.15);
+    z-index: 0;
+}
+
+body::before {
+    width: 250px;
+    height: 250px;
+    top: -80px;
+    left: -80px;
+}
+
+body::after {
+    width: 300px;
+    height: 300px;
+    bottom: -100px;
+    right: -100px;
+}
+
 
 .navbar {
     width: 100%;
@@ -22,7 +51,9 @@ body {
     box-shadow: 0 4px 10px rgba(255, 173, 204, 0.4);
     position: sticky;
     top: 0;
+    z-index: 10;
 }
+
 .logo {
     font-size: 26px;
     font-weight: bold;
@@ -48,34 +79,39 @@ body {
     border-bottom: 2px solid #fff;
 }
 
-    
-body {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    background: linear-gradient(120deg, #fff0f6, #ffd6e8);
-    color: #4a004e;
-}
 
 .auth-wrapper {
     width: 100%;
-    min-height: calc(100vh - 70px); 
+    min-height: calc(100vh - 70px);
     display: flex;
     justify-content: center;
     align-items: center;
-     position: relative;
+    position: relative;
     z-index: 1;
 }
+
+
 .auth-card {
-      width: 380px;
+    width: 380px;
     padding: 40px;
     border-radius: 25px;
     box-shadow: 0 25px 60px rgba(214, 51, 132, 0.25);
-    background: url('candy-background.jpg') no-repeat center center;
-    background-size: cover; 
+    background: url("candy-background.jpg") no-repeat center center;
+    background-size: cover;
     position: relative;
-    color: #4a004e; /
-
+    color: #4a004e;
 }
+
+
+.auth-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 20px;
+}
+
+
 .brand {
     text-align: center;
     font-size: 34px;
@@ -83,19 +119,23 @@ body {
     color: #d63384;
     margin-bottom: 10px;
 }
+
+
 .subtitle {
     text-align: center;
     color: #666;
     font-size: 14px;
     margin-bottom: 30px;
-
 }
-form label{
+
+
+form label {
     font-size: 13px;
     font-weight: 600;
     color: #444;
 }
-form input{
+
+form input {
     width: 100%;
     padding: 12px;
     margin: 8px 0 20px;
@@ -103,7 +143,39 @@ form input{
     border: 1px solid #f3b5d1;
     outline: none;
     font-size: 14px;
+    transition: 0.3s;
 }
+
+form input:focus {
+    border-color: #d63384;
+}
+
+
+input.error-input {
+    border: 1px solid #d63384;
+    background: #fff0f6;
+}
+
+
+.error {
+    color: #d63384;
+    font-size: 12px;
+    margin-top: -15px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+
+.show-password {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+
 form button {
     width: 100%;
     padding: 14px;
@@ -115,49 +187,38 @@ form button {
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s;
-
 }
-.switch  {
+
+form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(214, 51, 132, 0.3);
+}
+
+
+.switch {
     margin-top: 15px;
     font-size: 14px;
+    text-align: center;
 }
-.switch a{
+
+.switch a {
     color: #d63384;
     text-decoration: none;
     font-weight: 600;
 }
-
-   .auth-img {
-   width: 100%; 
-    height: 150px; 
-    object-fit: cover; 
-    border-radius: 20px 20px 0 0;
-    margin-bottom: 20px;
-   }
-   body::before, body::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 95, 162, 0.15); /* ngjyra pastel */
-    z-index: 0; /* mbas card-it */
-}
-
-/* Bubble i madh lart majtas */
-body::before {
-    width: 250px;
-    height: 250px;
-    top: -80px;
-    left: -80px;
-}
-
-/* Bubble i madh poshtë djathtas */
-body::after {
-    width: 300px;
-    height: 300px;
-    bottom: -100px;
-    right: -100px;
+.show-password input[type="checkbox"] {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    accent-color: #d63384;
+    cursor: pointer;
 }
 
 
 
-  
+
+
+
+
+
