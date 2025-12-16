@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SweetHue | Rate Us</title>
+<link rel="stylesheet" href="rateUs.css">
+<link rel="stylesheet" href="style.css"> <!-- Nëse navbar përdor CSS nga style.css -->
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">SweetHue</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="DessertsPage.html">Desserts</a></li>
+        <li><a href="rateUs.html" class="active">Rate Us</a></li>
+    </ul>
+</nav>
+
+<!-- Main container për Rate Us -->
+<div class="container">
+    <h1>Rate SweetHue ⭐</h1>
+    <p class="subtitle">Tell us how sweet your experience was?</p>
+    <div class="rate-box">
+        <div class="stars">
+            <span data-value="1">★</span>
+            <span data-value="2">★</span>
+            <span data-value="3">★</span>
+            <span data-value="4">★</span>
+            <span data-value="5">★</span>
+        </div>
+        <textarea id="feedback" placeholder="Leave your feedback here..."></textarea>
+        <button id="submitBtn">Submit Feedback</button>
+    </div>
+    <div id="reviews" class="reviews"></div>
+</div>
+
+<script src="rateus.js"></script>
+</body>
+</html>
