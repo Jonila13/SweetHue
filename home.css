@@ -177,20 +177,6 @@ body {
     object-fit:cover;
     border-radius:50%;
 }
-/* hero*/
-.hero-info{
-    background: url('baking.jpg') no-repeat center center/cover;
-    position: relative;
-    padding: 100px 10%;
-    color: white;
-}
-
-.hero-overlay{
-    background-color: rgba(0,0,0,0.55); /* mbështjell tekstin për lexueshmëri */
-    padding: 60px;
-    border-radius: 20px;
-}
-
 .hero-text h2{
     font-size: 36px;
     color: #ffe4f2;
