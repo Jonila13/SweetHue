@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    margin: 0;
+    font-family: "Poppins",sans-serif;
+    background: #ffe4f2;
+    color: #4a004e;
+}
+
+.navbar {
+    width: 100%;
+    background: #ffb3d1;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(255, 173, 204, 0.4);
+    position: sticky;
+    top: 0;
+}
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #a8005c;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #a8005c;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #ffe4f2;
+    color: #4a004e;
+}
+
+.contact-wrapper {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1000px;
+    margin: 3rem auto;
+}
+
+
+.contact-container {
+    background: #ffd9e6; 
+    padding: 2rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    flex: 1;
+}
+
+.contact-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #a8005c;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background: #ffb3d1;
+    color: #fff;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #a8005c;
+}
+
+.error {
+    color: #ff0000;
+    font-size: 0.9rem;
+}
+
+.success {
+    text-align: center;
+    color: #28a745;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.creative-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.creative-text {
+    font-size: 1.3rem;
+    color: #a8005c;
+    font-style: italic;
+    text-align: center;
+}
+.footer{
+    background:#ffb3d1;
+    color:white;
+    padding:30px 0;
+    text-align:center;
+    font-size:14px;
+    font-weight:500;
+}

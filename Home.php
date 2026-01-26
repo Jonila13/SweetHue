@@ -2,21 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SweetHue</title>
-    <link rel="stylesheet" href="home.css">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+ <title>SweetHue</title>
+    <link rel="stylesheet"href="home.css">
+    
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">SweetHue</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="DessertsPage.html">Desserts</a></li>
-            <li><a href="aboutUS.html">About Us</a></li>
-        </ul>
-    </nav>
-    <!-- Home page -->
-     <section class="home">
+
+     <?php include 'navbar.php'; ?>
+    <!--Home page-->
+ <section class="home">
         <div class="home-hero">
             <div class="home-text">
                 <h1>Happiness<br>Starts With Cake</h1>
@@ -60,4 +55,3 @@
 
 </body>
 </html>
-     

@@ -8,16 +8,7 @@
     <link rel="stylesheet" href="footer.css">
 </head>
 <body>
-<nav class="navbar">
-    <div class="logo">SweetHue</div>
-
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="DessertsPage.html">Desserts</a></li>
-        <li><a href="aboutUS.html" class="active">About Us</a></li>
-    </ul>
-</nav>
-
+ <?php include 'navbar.php'; ?>
 <!-- contact us -->
 <section class="contact-container">
     <div class="contact-left">
@@ -58,26 +49,6 @@
         We combine creativity, precision, and premium ingredients to deliver desserts made with passion and professionalism.
     </p>
 </section>
-
-<!-- Floating Rate Us Button -->
-<a href="rateus.html" style="
-    position: fixed;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #ff85a2;
-    color: white;
-    text-decoration: none;
-    padding: 10px 14px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    z-index: 999;
-    transition: all 0.2s ease;
-">
-⭐ Rate Us
-</a>
 
 <!-- Footer -->
 <footer class="footer">

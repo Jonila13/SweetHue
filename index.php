@@ -2,30 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
- <title>SweetHue</title>
-    <link rel="stylesheet"href="home.css">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetHue</title>
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
-
-    <nav class="navbar">
-        <div class="logo">SweetHue</div>
-
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Desserts</a></li>
-            <li><a href="#">About Us</a></li>
-        
-        </ul>
-    </nav>
-    <!--Home page-->
- <section class="home">
+    <?php include 'navbar.php'; ?>
+    <!-- Home page -->
+     <section class="home">
         <div class="home-hero">
             <div class="home-text">
                 <h1>Happiness<br>Starts With Cake</h1>
                 <p>Sweet moments baked with love</p>
-                <a href="Login.html" class="btn">Login</a>
+                <a href="Login.php" class="btn">Login</a>
             </div>
 
             <div class="hero-image">
@@ -64,3 +53,4 @@
 
 </body>
 </html>
+     

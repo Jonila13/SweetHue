@@ -5,19 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SweetHue | Rate Us</title>
 <link rel="stylesheet" href="rateUs.css">
-<link rel="stylesheet" href="style.css"> <!-- Nëse navbar përdor CSS nga style.css -->
+<link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar">
-    <div class="logo">SweetHue</div>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="DessertsPage.html">Desserts</a></li>
-        <li><a href="rateUs.html" class="active">Rate Us</a></li>
-    </ul>
-</nav>
+ <?php include 'navbar.php'; ?>
 
 <!-- Main container për Rate Us -->
 <div class="container">
