@@ -7,14 +7,7 @@
     <link rel="stylesheet" href="Register.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">SweetHue</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="DessertsPage.html">Desserts</a></li>
-            <li><a href="aboutUS.html">About Us</a></li>
-        </ul>
-    </nav>
+    <?php include 'navbar.php'; ?>
     <!--Register form-->
     <div class="box">
         <h2>Register</h2>

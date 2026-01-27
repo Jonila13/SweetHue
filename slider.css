@@ -1,0 +1,42 @@
+.css-slider {
+    width: 100%;
+    background: #ffe4f2;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+/* track qe leviz */
+.slider-track {
+    display: flex;
+    gap: 50px;
+    width: max-content;
+    animation: slide 30s linear infinite;
+}
+
+/* fotot e sliderit */
+.css-slider img {
+    width: 220px;      /* MADHESIA FIX */
+    height: 140px;
+    object-fit: cover;
+    border-radius: 16px;
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* animacioni */
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .css-slider img {
+        width: 160px;
+        height: 110px;
+    }
+}
