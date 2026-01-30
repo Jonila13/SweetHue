@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(!isset($_SESSION['user_id'])){
+    header(header: "Location: Login.php");
+    exit;
+}
+echo "Welcome, ". $_SESSION['Email'] . "!";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

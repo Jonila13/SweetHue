@@ -1,3 +1,25 @@
+<?php
+session_start();
+include_once 'Database.php';
+include_once 'users.php';
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $db = new Database();
+    $connection = $db->getConnection();
+    $users = new users (db: $connection);
+
+    $Email = $_POST['Email'];
+    $Password = $_POST['Password'];
+
+    if($users->login( Email: $Email, Password: $Password)){
+        header(header: "Location: Home.php");
+        exit;
+    }else{
+        echo "Invalid login credentials!";
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +38,7 @@
          <h1 class="brand">SweetHue</h1>
          <p class="subtitle">Welcome back! Please login to your account</p>
          
-         <form id="loginForm" >
+         <form id="loginForm" ><form method="POST">
            <label>Email</label>
             <input type="email" id="email" placeholder="you@example.com">
             <small class="error" id="emailError"></small>
