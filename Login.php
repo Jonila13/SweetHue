@@ -1,27 +1,25 @@
 <?php
-session_start();
-include_once 'Database.php';
-include_once 'users.php';
+ session_start(); 
+ include_once 'Database.php'; 
+ include_once 'users.php'; 
 
- 
+ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+     $db = new Database();
+      $connection = $db->getConnection(); 
+      $users = new users($connection);
+       $Email = $_POST['Email'] ?? ''; 
+       $Password = $_POST['Password'] ?? '';
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $db = new Database();
-    $connection = $db->getConnection();
-    $users = new users (db: $connection);
+        if ($users->login($Email, $Password)) {
+             $_SESSION['user_email'] = $Email;
+              header("Location: Home.php"); 
 
-    $Email = $_POST['Email'];
-    $Password = $_POST['Password'];
-
-    if($users->login( Email: $Email, Password: $Password)){
-        header(header: "Location: Home.php");
-        exit;
-    }else{
-        echo "Invalid login credentials!";
-    }
-}
-
-?>
+              exit;
+               } 
+               else { 
+                $error = "Invalid login credentials!";
+                } };
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,21 +38,22 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
          <h1 class="brand">SweetHue</h1>
          <p class="subtitle">Welcome back! Please login to your account</p>
          
-         <form id="loginForm" ><form method="POST">
-           <label>Email</label>
-            <input type="email" id="email" placeholder="you@example.com">
-            <small class="error" id="emailError"></small>
+         <form id="loginForm" method="POST" action="login.php">
+    <label>Email</label>
+    <input type="email" id="email" name="Email" placeholder="you@example.com">
+    <small class="error" id="emailError"></small>
 
-            <label>Password</label>
-            <input type="password" id="password" placeholder="********">
-            <small class="error" id="passwordError"></small>
+    <label>Password</label>
+    <input type="password" id="password" name="Password" placeholder="********">
+    <small class="error" id="passwordError"></small>
 
-            <div class="show-password">
-                <input type="checkbox" id="togglePassword">
-                <label for="togglePassword">Show password</label>
-            </div>
-            <button type="submit">Sign In</button>
-         </form>
+    <div class="show-password">
+        <input type="checkbox" id="togglePassword">
+        <label for="togglePassword">Show password</label>
+    </div>
+
+    <button type="submit">Sign In</button>
+</form>
              
          
             <p class="switch">
@@ -65,7 +64,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
      </div>
    </div>
   <script>
-    const form = document.getElementById("loginForm");
+const form = document.getElementById("loginForm");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 
@@ -74,15 +73,14 @@ const passwordError = document.getElementById("passwordError");
 
 const togglePassword = document.getElementById("togglePassword");
 
-
-togglePassword.addEventListener("change", function () {
-    password.type = this.checked ? "text" : "password";
-});
-
+// show / hide password
+togglePassword.addEventListener("change", () => {
+    password.type = togglePassword.checked ? "text" : "password";
+}
+);
 
 form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
+    // reset errors
     emailError.textContent = "";
     passwordError.textContent = "";
     email.classList.remove("error-input");
@@ -95,7 +93,7 @@ form.addEventListener("submit", function (e) {
         email.classList.add("error-input");
         isValid = false;
     } else if (!email.value.includes("@")) {
-        emailError.textContent = "Please enter a valid email address";
+        emailError.textContent = "Please enter a valid email";
         email.classList.add("error-input");
         isValid = false;
     }
@@ -111,13 +109,9 @@ form.addEventListener("submit", function (e) {
     }
 
     if (isValid) {
-        alert("Login successful!");
+         alert("Login successful!");
+}
 
-        
-        setTimeout(() => {
-            window.location.href = "index.html";
-        }, 1000);
-    }
 });
 </script>
     
