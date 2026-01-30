@@ -3,6 +3,8 @@ session_start();
 include_once 'Database.php';
 include_once 'users.php';
 
+ 
+
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $db = new Database();
     $connection = $db->getConnection();

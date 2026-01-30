@@ -1,10 +1,11 @@
+let selectedRating = 0;
 const stars = document.querySelectorAll(".stars span");
 const button = document.getElementById("submitBtn");
-let selectedRating = 0;
 
 stars.forEach(star => {
     star.addEventListener("click", () => {
-        selectedRating = star.getAttribute("data-value");
+        selectedRating = parseInt(star.dataset.value);
+
         stars.forEach(s => s.classList.remove("active"));
         for (let i = 0; i < selectedRating; i++) {
             stars[i].classList.add("active");
@@ -13,20 +14,32 @@ stars.forEach(star => {
 });
 
 button.addEventListener("click", () => {
-    const feedback = document.getElementById("feedback").value;
+    const feedback = document.getElementById("feedback").value.trim();
 
     if (selectedRating === 0 || feedback === "") {
-        alert("Please select a rating and write feedback!");
+        alert("Select stars and write feedback!");
         return;
     }
 
-    const review = document.createElement("div");
-    review.className = "review";
-    review.innerHTML = `⭐ ${selectedRating}/5<p>${feedback}</p>`;
+    const formData = new FormData();
+    formData.append("rating", selectedRating);
+    formData.append("feedback", feedback);
 
-    document.getElementById("reviews").prepend(review);
+    fetch("rateUs.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(res => res.text())
+    .then(data => {
+        data = data.trim(); 
+        if (data === "success") {
+            alert("Thank you for your feedback ❤️");
 
-    document.getElementById("feedback").value = "";
-    selectedRating = 0;
-    stars.forEach(s => s.classList.remove("active"));
+            document.getElementById("feedback").value = "";
+            selectedRating = 0;
+            stars.forEach(s => s.classList.remove("active"));
+        } else {
+            alert("Server response: " + data);
+        }
+    });
 });

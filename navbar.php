@@ -5,6 +5,6 @@
         <li><a href="DessertsPage.php">Desserts</a></li>
         <li><a href="aboutUS.php">About Us</a></li>
         <li><a href="contact.php">Contact</a></li>
-        <li><a href="rateus.php">Rate Us</a></li>
+        <li><a href="rateUs.php">Rate Us</a></li>
     </ul>
 </nav>
