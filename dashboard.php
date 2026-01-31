@@ -71,7 +71,13 @@ $users = $conn->query(
 $products = $conn->query(
     "SELECT * FROM products ORDER BY id DESC"
 )->fetchAll(PDO::FETCH_ASSOC);
+$messages=$conn->query(
+    "SELECT * FROM contact_messages ORDER BY id DESC"
+)->fetchALL(PDO::  FETCH_ASSOC);
 
+$reviews=$conn->query(
+    "SELECT*FROM reviews ORDER BY id DESC"
+)->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -195,8 +201,54 @@ hr {
 </form>
 
 <hr>
+<h2>Contact Messages</h2>
+<table>
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Subject</th>
+    <th>Message</th>
+</tr>
+
+<?php foreach ($messages as $msg): ?>
+<tr>
+    <td><?= $msg['id'] ?></td>
+    <td><?= htmlspecialchars($msg['Name']) ?></td>
+    <td><?= htmlspecialchars($msg['Email']) ?></td>
+    <td><?= htmlspecialchars($msg['subject']) ?></td>
+    <td><?= htmlspecialchars($msg['Message']) ?></td>
+</tr>
+<?php endforeach; ?>
+</table>
+
+<hr>
 
 
+<h2>User Reviews</h2>
+<table>
+<tr>
+    <th>ID</th>
+    <th>Stars</th>
+    <th>Feedback</th>
+    <th>Created At</th>
+</tr>
 
+<?php foreach ($reviews as $review): ?>
+<tr>
+    <td><?= $review['id'] ?></td>
+    <td><?= $review['stars'] ?></td>
+    <td><?= htmlspecialchars($review['feedback']) ?></td>
+    <td><?= $review['created_at'] ?></td>
+</tr>
+<?php endforeach; ?>
+</table>
 </body>
 </html>
+
+
+
+
+
+
+
