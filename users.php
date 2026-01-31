@@ -22,7 +22,7 @@ class Users {
     }
 
     public function login($Email, $Password): bool {
-        $query = "SELECT id, Username, Email, Password
+        $query = "SELECT id, Username, Email, Password,role
                   FROM {$this->table_name}
                   WHERE Email = :Email";
 
@@ -36,6 +36,7 @@ class Users {
                 session_start();
                 $_SESSION['user_id'] = $row['id'];
                 $_SESSION['Email'] = $row['Email'];
+                $_SESSION['role'] = $row['role'];
                 return true;
             }
         }
