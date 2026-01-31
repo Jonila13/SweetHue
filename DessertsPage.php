@@ -1,3 +1,23 @@
+<?php 
+include_once 'navbar.php';
+include_once 'products.php';
+
+// Merr produktet nga databaza
+$productObj = new products();
+$products = $productObj->getAllProducts();
+
+// Rrugët – i njëjti folder me DessertsPage.php
+$baseDir = __DIR__ . '/'; 
+$baseUrl = '/PROJEKTI-DZHU/SweetHue/';
+
+// Emrat e Custom Cakes
+$customNames = [
+    'Birthday Cakes',
+    'Personalized donuts',
+    'Tradicional Dessert'
+];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,219 +25,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DessertsPage</title>
     <link rel="stylesheet" href="dessert.css">
-    <link rel="stylesheet"href="footer.css">
-    
-    
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
-     <?php include 'navbar.php'; ?>
-    <section class="header">
-        <h1>
-            Crafted with Passion &<br>
-            Precision<br> 
-            
-        </h1>
-        
-        <p>Sophisticated cakes created with passion, using the finest ingredients.
-            Each dessert is carefully designed to balance flavor,texture and modern
-            aesthetics - perfect for every special moment.
-        </p>
-    </section>
-    <section class="products">
 
-        <div class="products-card">
-        <img src="macarons1.jpg" alt="Macarons">
-        <h3>Macarons</h3>
-        <span class="price">€2.99</span>
-        </div>
-        
-        <div class="products-card">
-        <img src="cupcake.jpg" alt="Red Velvet Cupcake">
-        <h3>Red Velvet Cupcake</h3>
-        <span class="price">€2.50</span>
-        </div>
-
-        <div class="products-card">
-        <img src="Strawberry.jpg" alt="Strawberry Cake Slice">
-        <h3>Strawberry Cake Slice</h3>
-        <span class="price">€3.90</span>
-        </div>
-
-        <div class="products-card">
-        <img src="chocolate.jpg" alt="Chocolate Cake">
-        <h3>Chocolate Cake</h3>
-        <span class="price">€3.50</span>
-        </div>
-
-        <div class="products-card">
-        <img src="cheescake.jpg" alt="Cheescake">
-        <h3>Cheescake</h3>
-        <span class="price">€3.00</span>
-        </div>
-       
-         <div class="products-card">
-        <img src="vanillaICE.jpg" alt="Vanilla Ice Cream">
-        <h3>Vanilla Ice Cream</h3>
-        <span class="price">€1.50</span>
-        </div>
-
-         <div class="products-card">
-        <img src="brownie.jpg" alt="Brownie">
-        <h3>Brownie</h3>
-        <span class="price">€1.90</span>
-        </div>
-
-        <div class="products-card">
-        <img src="pinkDonut.jpg" alt="Pink Donut">
-        <h3>Pink Donut</h3>
-        <span class="price">€1.20</span>
-        </div>
-
-        <div class="products-card">
-        <img src="chocolateMufins.jpg" alt="Chocolate Muffin">
-        <h3>Chocolate Muffin</h3> 
-        <span class="price">€1.00</span>
-        </div>
-
-         <div class="products-card">
-        <img src="tiramisu.jpg" alt="Tiramisu">
-        <h3>Tiramisu</h3>
-        <span class="price">€3.50</span>
-        </div>
-
-        <div class="products-card">
-        <img src="vanillaPudding.jpg" alt="Vanilla Pudding">
-        <h3>Vanilla Pudding</h3>
-        <span class="price">€1.80</span>
-        </div>
-
-        <div class="products-card">
-        <img src="strawberryWafers.jpg" alt="Strawberry Wafers">
-        <h3>Strawberry Wafers</h3>
-        <span class="price">€2.40</span>
-        </div>
-
-        <div class="products-card">
-        <img src="churros.jpg" alt="Churros">
-        <h3>Churros</h3>
-        <span class="price">€3.20</span>
-        </div>
-
-        <div class="products-card">
-        <img src="pancakes.jpg" alt="Pancakes">
-        <h3>Pancakes</h3> 
-        <span class="price">€3.90</span>
-        </div>
-
-        <div class="products-card">
-        <img src="fruitTart.jpg" alt="Fruit Tart">
-        <h3>Fruit Tart</h3>
-        <span class="price">€2.30</span>
-        </div>
-
-        <div class="products-card">
-        <img src="caramelCake.jpg" alt="Caramel Cake">
-        <h3>Caramel Cake</h3>
-        <span class="price">€3.25</span>
-        </div>
-
-        <div class="products-card">
-        <img src="chipCookie.jpg" alt="Chocolate Chip Cookie">
-        <h3>Chocolate Chip Cookie</h3>
-        <span class="price">€1.20</span>
-        </div>
-
-        <div class="products-card">
-        <img src="`oreoCake.jpg" alt="Oreo Cake">
-        <h3>Oreo Cake</h3> 
-        <span class="price">€4.20</span>
-        </div>
-
-        <div class="products-card">
-        <img src="cinnamonRoll.jpg" alt="Cinnamonroll">
-        <h3>Cinnamonroll</h3> 
-        <span class="price">€2.80</span>
-        </div>
-
-        <div class="products-card">
-        <img src="bannanaBread.jpg" alt="Banana Bread">
-        <h3>Bannana Bread</h3>
-        <span class="price">€2.50</span>
-        </div>
-
-        <div class="products-card">
-        <img src="crepes.jpg" alt="Crepes">
-        <h3>Crepes</h3>
-        <span class="price">€3.60</span>
-        </div>
-
-         <div class="products-card">
-        <img src="berryCake.jpg" alt="Berry Cake">
-        <h3>Berry Cake</h3> 
-        <span class="price">€4.10</span>
-        </div>
-
-        <div class="products-card">
-        <img src="mangoCake.jpg" alt="Mango Cake">
-        <h3>Mango Cake</h3>
-        <span class="price">€4.50</span>
-        </div>
-
-        
-        <div class="products-card">
-        <img src="honeyCake.jpg" alt="Honey Cake">
-        <h3>Honey Cake</h3> 
-        <span class="price">€4.40</span>
-        </div>
-
-        <div class="products-card">
-        <img src="ferrero.jpg" alt="Ferrero Rocher Cake">
-        <h3>Ferrero Rocher Cake</h3>
-        <span class="price">€4.00</span>
-        </div>
-       
+<!-- Header Section -->
+<section class="header">
+    <h1>
+        Crafted with Passion &<br>
+        Precision
+    </h1>
+    <p>
+        Sophisticated cakes created with passion, using the finest ingredients.
+        Each dessert is carefully designed to balance flavor, texture, and modern
+        aesthetics - perfect for every special moment.
+    </p>
 </section>
 
-  <section class="custom-cakes">
+<!-- Products Section (NORMALE) -->
+<section class="products">
+<?php
+foreach ($products as $product) {
+
+    if (in_array($product['Name'], $customNames)) {
+        continue;
+    }
+
+    $product_name  = $product['Name'];
+    $product_price = $product['Price'];
+    $product_image = $product['Image'] ?: 'default.jpg';
+
+    if (!file_exists($baseDir . $product_image)) {
+        $product_image = 'default.jpg';
+    }
+
+    $imagePath = $baseUrl . $product_image;
+?>
+    <div class="products-card">
+        <img src="<?php echo $imagePath; ?>" alt="<?php echo htmlspecialchars($product_name); ?>">
+        <h3><?php echo htmlspecialchars($product_name); ?></h3>
+        <span class="price">€<?php echo number_format($product_price, 2); ?></span>
+    </div>
+<?php } ?>
+</section>
+
+<!-- Custom Signature Cakes (DINAMIKE, POSHTË) -->
+<section class="custom-cakes">
     <h2>Custom Signature Cakes</h2>
     <p class="custom-subtitle">
         Designed exclusively for your special moments
     </p>
 
     <div class="custom-grid">
+<?php
+foreach ($products as $product) {
 
-        <div class="custom-card">
-            <img src="birthdayCake.jpeg" alt="Birthday Cake">
+    if (!in_array($product['Name'], $customNames)) {
+        continue;
+    }
+
+    $product_name  = $product['Name'];
+    $product_price = $product['Price'];
+    $product_image = $product['Image'] ?: 'default.jpg';
+
+    if (!file_exists($baseDir . $product_image)) {
+        $product_image = 'default.jpg';
+    }
+
+    $imagePath = $baseUrl . $product_image;
+
+    if ($product_name === 'Birthday Cakes') {
+        $desc = 'Minimal white design with handcrafted sugar flowers.';
+    } elseif ($product_name === 'Personalized donuts') {
+        $desc = 'Gold details, premium chocolate layers & custom message.';
+    } else {
+        $desc = 'Delight in the sweet perfection of our baklava.';
+    }
+?>
+        <div class="custom-card <?php echo $product_name === 'Personalized donuts' ? 'featured' : ''; ?>">
+            <img src="<?php echo $imagePath; ?>" alt="<?php echo htmlspecialchars($product_name); ?>">
             <div class="custom-info">
-                <h3>Birthday Cakes</h3>
-                <p>Minimal white design with handcrafted sugar flowers.</p>
-                <span class="custom-price">From €45</span>
+                <h3><?php echo htmlspecialchars($product_name); ?></h3>
+                <p><?php echo $desc; ?></p>
+                <span class="custom-price">From €<?php echo number_format($product_price, 2); ?></span>
             </div>
         </div>
-
-        <div class="custom-card featured">
-            <img src="donuts.jpg" alt="Birthday Cake">
-            <div class="custom-info">
-                <h3>Personalized donuts</h3>
-                <p>Gold details, premium chocolate layers & custom message.</p>
-                <span class="custom-price">From €25</span>
-            </div>
-        </div>
-
-        <div class="custom-card">
-            <img src="baklava.jpg" alt="Tradicional Dessert">
-            <div class="custom-info">
-                <h3>Tradicional Dessert</h3>
-                <p>Delight in the sweet perfection of our baklava.</p>
-                <span class="custom-price">From €50</span>
-            </div>
-        </div>
+<?php } ?>
     </div>
-        </section>
+</section>
+
+<!-- Footer -->
 <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2025 SweetHue. All rights reserved.</p>
-        </div>
-    </footer>
+    <div class="footer-content">
+        <p>&copy; 2025 SweetHue. All rights reserved.</p>
+    </div>
+</footer>
+
 </body>
 </html>
