@@ -1,16 +1,16 @@
 <?php 
-include_once 'navbar.php';
+
 include_once 'products.php';
 
-// Merr produktet nga databaza
+
 $productObj = new products();
 $products = $productObj->getAllProducts();
 
-// Rrugët – i njëjti folder me DessertsPage.php
+
 $baseDir = __DIR__ . '/'; 
 $baseUrl = '/PROJEKTI-DZHU/SweetHue/';
 
-// Emrat e Custom Cakes
+
 $customNames = [
     'Birthday Cakes',
     'Personalized donuts',
@@ -29,8 +29,9 @@ $customNames = [
 </head>
 <body>
 
-<!-- Header Section -->
+<?php include "header.php"; ?>
 <section class="header">
+    
     <h1>
         Crafted with Passion &<br>
         Precision
@@ -42,7 +43,7 @@ $customNames = [
     </p>
 </section>
 
-<!-- Products Section (NORMALE) -->
+
 <section class="products">
 <?php
 foreach ($products as $product) {
@@ -69,7 +70,7 @@ foreach ($products as $product) {
 <?php } ?>
 </section>
 
-<!-- Custom Signature Cakes (DINAMIKE, POSHTË) -->
+
 <section class="custom-cakes">
     <h2>Custom Signature Cakes</h2>
     <p class="custom-subtitle">
@@ -114,7 +115,7 @@ foreach ($products as $product) {
     </div>
 </section>
 
-<!-- Footer -->
+
 <footer class="footer">
     <div class="footer-content">
         <p>&copy; 2025 SweetHue. All rights reserved.</p>

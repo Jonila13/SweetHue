@@ -66,7 +66,7 @@ include_once 'Database.php';
      <link rel="stylesheet" href="contact.css">
      </head>
     <body> 
-     <?php include 'navbar.php'?>
+       <?php include "header.php"; ?>
      <section class="contact-section"> 
      <div class="contact-wrapper"> <!-- Contact Form --> 
      <div class="contact-container">

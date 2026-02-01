@@ -86,7 +86,7 @@ $reviews=$conn->query(
 <meta charset="UTF-8">
 <title>Admin Dashboard</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+ <?php include "header.php"; ?>
 <style>
 body {
     font-family: Arial, sans-serif;

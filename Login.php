@@ -35,7 +35,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <link rel="stylesheet" href="login.css">
 </head>
 <body>
-<?php include 'navbar.php'; ?>
+<?php include "header.php"; ?>
+
 
 <div class="auth-wrapper">
     <div class="auth-card">

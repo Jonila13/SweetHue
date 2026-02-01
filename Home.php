@@ -16,9 +16,7 @@ echo "Welcome, ". $_SESSION['Email'] . "!";
     
 </head>
 <body>
-
-     <?php include 'navbar.php'; ?>
-    <!--Home page-->
+<?php include "header.php"; ?>
  <section class="home">
         <div class="home-hero">
             <div class="home-text">

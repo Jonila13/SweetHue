@@ -6,9 +6,9 @@
     <title>SweetHue</title>
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet"href="slider.css">
-</head>
+</head> 
 <body>
-    <?php include 'navbar.php'; ?>
+    <?php include "header.php"; ?>
     <!-- Home page -->
      <section class="home">
         <div class="home-hero">

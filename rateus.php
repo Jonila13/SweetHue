@@ -37,8 +37,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'getReviews') {
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<?php include 'navbar.php'; ?>
+ <?php include "header.php"; ?>
 
 <div class="container">
     <h1>Rate SweetHue ⭐</h1>

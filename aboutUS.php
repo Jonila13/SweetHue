@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="footer.css">
 </head>
 <body>
- <?php include 'navbar.php'; ?>
+     <?php include "header.php"; ?>
+ 
 <!-- contact us -->
 <section class="contact-container">
     <div class="contact-left">
@@ -50,7 +51,7 @@
     </p>
 </section>
 
-<!-- Footer -->
+
 <footer class="footer">
     <div class="footer-content">
         <p>&copy; 2025 SweetHue. All rights reserved.</p>
