@@ -86,7 +86,7 @@ $reviews=$conn->query(
 <meta charset="UTF-8">
 <title>Admin Dashboard</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <?php include "header.php"; ?>
+ 
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -120,6 +120,45 @@ img {
 }
 hr {
     margin: 40px 0;
+}
+media (max-width: 768px) {
+
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;  /* e lejon scroll horizontal nëse duhet */
+    }
+
+    thead {
+        display: none; /* fshi header-in për mobile */
+    }
+
+    tbody, tr, td {
+        display: block;
+        width: 100%;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        background: #f9f9f9;
+    }
+
+    td {
+        padding: 6px 0;
+        border: none;
+    }
+
+    img {
+        max-width: 80px;
+        height: auto;
+    }
+
+    input, button {
+        width: 100%;
+    }
 }
 </style>
 </head>

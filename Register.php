@@ -21,7 +21,7 @@ include_once 'Database.php';
                            <link rel="stylesheet" href="Register.css">
                          </head>
                             <body>
-                                 <?php include 'navbar.php'; ?> <!--Register form--> 
+                                 <?php include 'header.php'; ?> 
                                  <div class="box">
                                      <h2>Register</h2>
                                       <form method="POST">
