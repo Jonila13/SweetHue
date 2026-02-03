@@ -8,7 +8,7 @@ $products = $productObj->getAllProducts();
 
 
 $baseDir = __DIR__ . '/'; 
-$baseUrl = '/PROJEKTI-DZHU/SweetHue/';
+$baseUrl = '/SweetHue/';
 
 
 $customNames = [
